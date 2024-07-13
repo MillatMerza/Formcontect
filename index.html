@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact Us Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form name="form" onsubmit="return validateForm()">
+        <div class="two_input top">
+          <h1 class="title">Contact Us</h1>
+          <a id="purpul">purple mode</a>
+        </div>
+
+        <div class="two_input">
+          <div>
+            <label for="firstname">First Name <span>*</span></label>
+            <input
+              class="input"
+              type="text"
+              name="firstname"
+              id="firstname"
+              minlength="5"
+            />
+            <p id="firstname-error" class="error">This field is required</p>
+          </div>
+          <div>
+            <label for="lastname">Last Name <span>*</span></label>
+            <input class="input" type="text" name="lastname" id="lastname" />
+            <p id="lastname-error" class="error">This field is required</p>
+          </div>
+        </div>
+        <div class="one_input">
+          <label for="email">Email Address <span>*</span></label>
+          <input class="input" type="email" name="email" id="email" />
+          <p id="email-error" class="error">
+            Please enter a valid email address
+          </p>
+        </div>
+        <div>
+          <label for="c1">Query Type <span>*</span></label>
+          <div class="two_input top">
+            <div class="check">
+              <input class="check_input" type="checkbox" name="query" id="c1" />
+              <label class="label_check" for="c1">General Enquiry</label>
+            </div>
+            <div class="check">
+              <input class="check_input" type="checkbox" name="query" id="c2" />
+              <label class="label_check" for="c2">Support Request</label>
+            </div>
+          </div>
+          <p id="query-error" class="error">
+            Please select at least one query type
+          </p>
+        </div>
+        <div class="message">
+          <label for="text">Message <span>*</span></label>
+          <textarea class="text" name="message" id="message"></textarea>
+          <p id="message-error" class="error">This field is required</p>
+        </div>
+        <div class="policy">
+          <div class="policy_content">
+            <input type="checkbox" name="consent" id="c3" />
+            <label class="label_check" for="c3">
+              I consent to being contacted by the team <span>*</span>
+            </label>
+          </div>
+          <p id="consent-error" class="error">
+            You must consent to be contacted
+          </p>
+        </div>
+        <button type="submit" id="btn" class="input input_btn">Submit</button>
+      </form>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
